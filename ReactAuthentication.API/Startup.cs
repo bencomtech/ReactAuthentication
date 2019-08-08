@@ -28,8 +28,9 @@ namespace ReactAuthentication.API
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
-                Provider = new AuthorizationServerProvider()
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(1),
+                Provider = new AuthorizationServerProvider(),
+                RefreshTokenProvider = new RefreshTokenProvider()
             };
 
             app.UseOAuthAuthorizationServer(serverOptions);

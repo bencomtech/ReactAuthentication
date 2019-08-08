@@ -130,9 +130,22 @@
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\RefreshToken.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Migrations\201908081348257_InitialCreate.cs" />
+    <Compile Include="Migrations\201908081348257_InitialCreate.Designer.cs">
+      <DependentUpon>201908081348257_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908081545434_ClientRefreshTokenCreate.cs" />
+    <Compile Include="Migrations\201908081545434_ClientRefreshTokenCreate.Designer.cs">
+      <DependentUpon>201908081545434_ClientRefreshTokenCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\AuthorizationServerProvider.cs" />
+    <Compile Include="Providers\RefreshTokenProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +159,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201908081348257_InitialCreate.resx">
+      <DependentUpon>201908081348257_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908081545434_ClientRefreshTokenCreate.resx">
+      <DependentUpon>201908081545434_ClientRefreshTokenCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
